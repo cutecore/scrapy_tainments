@@ -17,6 +17,10 @@ class DemoPipeline:
 
     def process_item(self, item, spider):
         self.download(item['cover'],"1_")
+        self.download(item['shoot'],"2_")
+        self.download(item['video'],"3_")
+        # M3U8 可以使用 https://github.com/nilaoda/N_m3u8DL-CLI 进行批量下载
+       
 
 
     def download(self, url, path):
